@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<link rel="icon" href="./../images/favicon.png" type="image/gif" />
+<!-- bootstrap css -->
+<link rel="stylesheet" href="./../css/bootstrap.min.css">
+<!-- style css -->
+<link rel="stylesheet" href="css/style.css">
+
+<div id="headContainer"></div>
+
+<body>
+    <div class="wrapper d-flex align-items-stretch">
+        <div id="navContainer"></div>
+        <section>
+
+        </section>
+    </div>
+
+    <!-- Agrega los scripts de Bootstrap (jQuery y Popper.js) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="./js/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#headContainer").load("head.html");
+            $('#navContainer').load('nav.html', function () {
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').toggleClass('active');
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
